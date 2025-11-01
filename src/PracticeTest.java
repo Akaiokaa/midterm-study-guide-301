@@ -1,5 +1,7 @@
 import static org.junit.Assert.*;
 
+import java.util.List;
+
 import org.junit.jupiter.api.Test;
 
 public class PracticeTest {
@@ -48,6 +50,17 @@ public class PracticeTest {
     }
 
     // TODO: Make tests for each problem you solve
+
+    //Test cases for longestWordStartingWithChar
+    @Test
+    void testlongestWordStartingWithChar_VariousWords(){
+        //Arrange
+        List<String> input = List.of("hello", "fire", "tree", "kingdom", "keterlomber");
+        //Act
+        String actual = Practice.longestWordStartingWithChar('k', input);
+        //Assert
+        assertEquals("keterlomber", actual);
+    }
     
 }
 

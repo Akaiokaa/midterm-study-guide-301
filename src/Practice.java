@@ -1,4 +1,6 @@
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class Practice {
     /**
@@ -41,7 +43,7 @@ public class Practice {
 
 
     // TODO: Implement the other methods from the study guide AND tests for each one
-    public static String longestWordStartingWithChar(char letter, String[] words) {
+    public static String longestWordStartingWithChar(char letter, List<String> words) {
         return "";
     }
 
