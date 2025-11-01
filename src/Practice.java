@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Practice {
     /**
      * Returns the difference between the largest and smallest integer in an array.
@@ -6,8 +8,20 @@ public class Practice {
      * @return the difference between the largest and smallest number
      */
     public static int maxDiff(int[] nums) {
+        /* Questions to ask
+         * Should I have to worry about the list having the same number?
+         * Should I be worried about edge cases?
+         * To clarify when we say difference we want largest - smallest not the other way arount?
+         * Am I allowed to call upon a java util?
+         */
         // TODO: implement this
-        return -1;
+        /*
+         * pseudo code
+         *  int[] newList.sort = varible;
+         * return newlist[0] - newlist[len(newlist) - 1]
+         */
+        Arrays.sort(nums);
+        return nums[nums.length - 1] - nums[0];
     }
 
 

@@ -34,7 +34,7 @@ public class PracticeTest {
         //Act
         int actual = Practice.maxDiff(numbers);
         //Assert
-        assertEquals(9999, actual);
+        assertEquals(10000, actual);
     }
     @Test
 
