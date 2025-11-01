@@ -36,6 +36,16 @@ public class PracticeTest {
         //Assert
         assertEquals(9999, actual);
     }
+    @Test
+
+    void testMaxDiffWithNegativeAndZero(){
+        //Arrange
+        int[] numbers = {0, -1};
+        //Act
+        int actual = Practice.maxDiff(numbers);
+        //Assert
+        assertEquals(1, actual);
+    }
 
     // TODO: Make tests for each problem you solve
     
