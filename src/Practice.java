@@ -72,7 +72,28 @@ public class Practice {
         return longestWordWithChar;
     }
     public static int countWordsBetweenLengths(int n, int m, Set<String> words) {
-        return 0;
+        /*
+         * do i have to worry about the set having any empty inputs?
+         * will I have to worry about any of the words not matching the betweenlengths?
+         * is this inclusive or not? i assume non-inclusive.
+         */
+        /*
+         * psuedocode
+         * int countWordsBetweenLengths = 0;
+         * for loop
+         *  if word.size() > n && < m
+         *      count++
+         * return count words between
+        */
+        if (words.isEmpty()) return 0;
+        int countWordsBetweenLengths = 0;
+        for(String word: words){
+            if (word.length() > n && word.length() < m) {
+                countWordsBetweenLengths++;
+            }
+        }
+        return countWordsBetweenLengths;
+        /* o of n where n equals the length of our words */
     }
 
     // For each method you are only required to implement it for one of the data
