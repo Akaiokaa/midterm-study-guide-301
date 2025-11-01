@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Set;
 
@@ -71,6 +72,7 @@ public class Practice {
         }
         return longestWordWithChar;
     }
+
     public static int countWordsBetweenLengths(int n, int m, Set<String> words) {
         /*
          * do i have to worry about the set having any empty inputs?
@@ -95,6 +97,11 @@ public class Practice {
         return countWordsBetweenLengths;
         /* o of n where n equals the length of our words */
     }
+    public static int differenceOddEvenValues(HashMap<Integer, Integer> map) {
+        return 0;
+    }
+
+
 
     // For each method you are only required to implement it for one of the data
     // structures. But use a different data structure for each method. For example,
