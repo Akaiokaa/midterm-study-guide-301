@@ -1,6 +1,7 @@
 import static org.junit.Assert.*;
 
 import java.util.List;
+import java.util.Set;
 
 import org.junit.jupiter.api.Test;
 
@@ -89,6 +90,50 @@ public class PracticeTest {
         String actual = Practice.longestWordStartingWithChar('z', input);
         // Assert
         assertEquals("zebra", actual);
+    }
+
+    // test cases for countWordsBetweenLengths
+    @Test
+    void testCountWordsBetweenLengths_BetweenFourAndEightLetters(){
+        //Arrange
+        Set<String> input = Set.of("fivee","hello","trouble");
+        //Act
+        int actual = Practice.countWordsBetweenLengths(4, 8, input);
+        //Assert
+        //Allowed numbers 5,6,7
+        assertEquals(3, actual);
+    }
+
+    @Test
+    void testCountWordsBetweenLengths_NoWordsInRange() {
+        // Arrange
+        Set<String> input = Set.of("a", "be", "cat");
+        // Act
+        int actual = Practice.countWordsBetweenLengths(4, 6, input);
+        //Assert
+        //Allowed number 5
+        assertEquals(0, actual); 
+    }
+    
+    @Test
+    void testCountWordsBetweenLengths_SomeWordsInRange() {
+        //Arrange
+        Set<String> input = Set.of("apple", "banana", "kiwi", "orange");
+        //Act
+        int actual = Practice.countWordsBetweenLengths(5, 7, input);
+        //Assert
+        //Allowed numbers 6 letters exactly
+        assertEquals(2, actual);
+    }
+
+    @Test
+    void testCountWordsBetweenLengths_EmptySet() {
+        //Arrange
+        Set<String> input = Set.of();
+        //Act
+        int actual = Practice.countWordsBetweenLengths(1, 10, input);
+        //Assert
+        assertEquals(0, actual); 
     }
 
     
