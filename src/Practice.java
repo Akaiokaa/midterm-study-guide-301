@@ -99,7 +99,35 @@ public class Practice {
         /* o of n where n equals the length of our words */
     }
     public static int differenceOddEvenValues(Map<Integer, Integer> map) {
-        return 0;
+        /*
+         * Will I have to worry about an empty map? should I make a casing
+         * Will I have to worry about a map having only even or odd values?
+         * Are there any edges cases I should implement?
+         */
+        /*
+         * pseudo code
+         * int oddCount = 0;
+         * int evenCount = 0;
+         * 
+         * for(Integer number in map.values()){
+         *      if number % 2 == 0 {
+         *          oddcount ++
+         *      } else
+         *          evencount ++;
+         * }
+         * return oddcount - evencount
+         */
+        int oddCount = 0;
+        int evenCount = 0;
+        for(Integer number: map.values()){
+            if (number % 2 == 0){
+                evenCount++;
+            } else{
+                oddCount++;
+            }
+        }
+
+        return oddCount - evenCount;
     }
 
 
