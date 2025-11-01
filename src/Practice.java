@@ -3,6 +3,7 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Set;
+import java.util.Map;
 
 public class Practice {
     /**
@@ -97,7 +98,7 @@ public class Practice {
         return countWordsBetweenLengths;
         /* o of n where n equals the length of our words */
     }
-    public static int differenceOddEvenValues(HashMap<Integer, Integer> map) {
+    public static int differenceOddEvenValues(Map<Integer, Integer> map) {
         return 0;
     }
 

@@ -1,7 +1,9 @@
 import static org.junit.Assert.*;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Set;
+import java.util.Map;
 
 import org.junit.jupiter.api.Test;
 
@@ -134,6 +136,56 @@ public class PracticeTest {
         int actual = Practice.countWordsBetweenLengths(1, 10, input);
         //Assert
         assertEquals(0, actual); 
+    }
+    //Test cases for differenceOddEvenValues
+    @Test
+    void differenceOddEvenValues_DifferenceIsNegative(){
+        //Arrange
+        Map<Integer,Integer> input = new HashMap<>();
+        input.put(1, 1);
+        input.put(2, 2);
+        input.put(3, 2);
+        input.put(4, 2);
+        //Act
+        int actual = Practice.differenceOddEvenValues(input);
+        //Assert
+        assertEquals(-2, actual); // 1 odd -  len(2,2,2) = 1 - 3 expected -2
+    }
+    @Test
+    void differenceOddEvenValues_AllOddValues() {
+        // Arrange
+        Map<Integer,Integer> input = new HashMap<>();
+        input.put(1, 1);
+        input.put(2, 3);
+        input.put(3, 5);
+        // Act
+        int actual = Practice.differenceOddEvenValues(input);
+        // Assert
+        assertEquals(3, actual); // 3 - 0 because there are no even values.
+    }
+
+    @Test
+    void differenceOddEvenValues_AllEvenValues() {
+        // Arrange
+        Map<Integer,Integer> input = new HashMap<>();
+        input.put(1, 2);
+        input.put(2, 4);
+        input.put(3, 6);
+        input.put(4, 8);
+        // Act
+        int actual = Practice.differenceOddEvenValues(input);
+        // Assert
+        assertEquals(-4, actual); // odd = 0 even len(2,4,6,8) = 4  -->  [0 - 4 = -4]
+    }
+
+    @Test
+    void differenceOddEvenValues_EmptyMap() {
+        // Arrange
+        Map<Integer,Integer> input = new HashMap<>();
+        // Act
+        int actual = Practice.differenceOddEvenValues(input);
+        // Assert
+        assertEquals(0, actual); // 0 even - 0 odd = 0, default values are 0 so this should be the expected.
     }
 
     
