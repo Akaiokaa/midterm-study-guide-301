@@ -129,6 +129,9 @@ public class Practice {
 
         return oddCount - evenCount;
     }
+    public static int secondLargestNumber(){
+        return 0;
+    }
 
 
 
