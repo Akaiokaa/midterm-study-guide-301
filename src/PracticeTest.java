@@ -61,6 +61,36 @@ public class PracticeTest {
         //Assert
         assertEquals("keterlomber", actual);
     }
+    @Test
+    void testlongestWordStartingWithChar_NoMatchingWord() {
+        // Arrange
+        List<String> input = List.of("apple", "banana", "cherry");
+        // Act
+        String actual = Practice.longestWordStartingWithChar('z', input);
+        // Assert
+        assertEquals("", actual); 
+    }
+
+    @Test
+    void testlongestWordStartingWithChar_MultipleSameLength() {
+        // Arrange
+        List<String> input = List.of("cat", "car", "cup", "cap");
+        // Act
+        String actual = Practice.longestWordStartingWithChar('c', input);
+        // Assert
+        assertEquals("cat", actual);
+    }
+
+    @Test
+    void testlongestWordStartingWithChar_SingleWord() {
+        // Arrange
+        List<String> input = List.of("zebra");
+        // Act
+        String actual = Practice.longestWordStartingWithChar('z', input);
+        // Assert
+        assertEquals("zebra", actual);
+    }
+
     
 }
 
