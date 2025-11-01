@@ -44,7 +44,31 @@ public class Practice {
 
     // TODO: Implement the other methods from the study guide AND tests for each one
     public static String longestWordStartingWithChar(char letter, List<String> words) {
-        return "";
+        /*
+         * do i have to worry about all the words being the same?
+         * will the list passed in allways contain a word that has the "char"?
+         * do i have to worry about casing?
+         */
+        /*
+         * psuedo code
+         * varble = store longestWordWithChar
+         * 
+         * loop through
+         *   word in words
+         *      if the word.length > longestWordwithchar.length and word.charAt(0) == letter
+         *         longestword = word;
+         * return longestword
+         */
+        if (words.isEmpty()) return "";
+
+        String longestWordWithChar = "";
+        for(String word: words){
+            if(word.length() > longestWordWithChar.length() && 
+               word.toLowerCase().charAt(0) == letter){
+                longestWordWithChar = word;
+            }
+        }
+        return longestWordWithChar;
     }
 
     // For each method you are only required to implement it for one of the data
