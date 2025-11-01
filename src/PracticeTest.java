@@ -24,9 +24,18 @@ public class PracticeTest {
         //Act
         int actual = Practice.maxDiff(numbers);
         //Assert
-        assertEquals(1, actual);
+        assertEquals(0, actual);
     }
     
+    @Test
+    void testMaxDiffWithVariedNumbers(){
+        //Arrange
+        int[] numbers = {1, 0, 1000, 10, 10000};
+        //Act
+        int actual = Practice.maxDiff(numbers);
+        //Assert
+        assertEquals(9999, actual);
+    }
 
     // TODO: Make tests for each problem you solve
     
