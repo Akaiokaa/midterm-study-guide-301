@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Set;
 
 public class Practice {
     /**
@@ -69,6 +70,9 @@ public class Practice {
             }
         }
         return longestWordWithChar;
+    }
+    public static int countWordsBetweenLengths(int n, int m, Set<String> words) {
+        return 0;
     }
 
     // For each method you are only required to implement it for one of the data
