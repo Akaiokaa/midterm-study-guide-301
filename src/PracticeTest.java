@@ -139,7 +139,7 @@ public class PracticeTest {
     }
     //Test cases for differenceOddEvenValues
     @Test
-    void differenceOddEvenValues_DifferenceIsNegative(){
+    void testDifferenceOddEvenValues_DifferenceIsNegative(){
         //Arrange
         Map<Integer,Integer> input = new HashMap<>();
         input.put(1, 1);
@@ -152,7 +152,7 @@ public class PracticeTest {
         assertEquals(-2, actual); // 1 odd -  len(2,2,2) = 1 - 3 expected -2
     }
     @Test
-    void differenceOddEvenValues_AllOddValues() {
+    void testDifferenceOddEvenValues_AllOddValues() {
         // Arrange
         Map<Integer,Integer> input = new HashMap<>();
         input.put(1, 1);
@@ -165,7 +165,7 @@ public class PracticeTest {
     }
 
     @Test
-    void differenceOddEvenValues_AllEvenValues() {
+    void testDifferenceOddEvenValues_AllEvenValues() {
         // Arrange
         Map<Integer,Integer> input = new HashMap<>();
         input.put(1, 2);
@@ -179,7 +179,7 @@ public class PracticeTest {
     }
 
     @Test
-    void differenceOddEvenValues_EmptyMap() {
+    void testDifferenceOddEvenValues_EmptyMap() {
         // Arrange
         Map<Integer,Integer> input = new HashMap<>();
         // Act
@@ -187,8 +187,59 @@ public class PracticeTest {
         // Assert
         assertEquals(0, actual); // 0 even - 0 odd = 0, default values are 0 so this should be the expected.
     }
+    //Test cases for secondLargestNumber
+    @Test
+    void testSecondLargestNumbers_SearchForSecondKeyEqualsSix() {
+        // Arrange
+        Map<Integer,Integer> input = new HashMap<>();
+        input.put( 2,1);
+        input.put(1,2);
+        input.put( 6,3);
+        input.put( 9,4);
+        // Act
+        int actual = Practice.secondLargestNumber(input);
+        // Assert
+        assertEquals(6, actual);
+    }
+    @Test
+    void testSecondLargestNumbers_AllPositiveKeys() {
+        // Arrange
+        Map<Integer,Integer> input = new HashMap<>();
+        input.put(2, 1);
+        input.put(4, 2);
+        input.put(6, 3);
+        input.put(8, 4);
+        // Act
+        int actual = Practice.secondLargestNumber(input);
+        // Assert
+        assertEquals(6, actual); 
+    }
 
-    
+    @Test
+    void testSecondLargestNumbers_TwoKeysOnly() {
+        // Arrange
+        Map<Integer,Integer> input = new HashMap<>();
+        input.put(100, 1);
+        input.put(200, 2);
+        // Act
+        int actual = Practice.secondLargestNumber(input);
+        // Assert
+        assertEquals(100, actual);
+    }
+
+    @Test
+    void testSecondLargestNumbers_KeysWithNegatives() {
+        // Arrange
+        Map<Integer,Integer> input = new HashMap<>();
+        input.put(-5, 1);
+        input.put(-1, 2);
+        input.put(-3, 3);
+        input.put(-2, 4);
+        // Act
+        int actual = Practice.secondLargestNumber(input);
+        // Assert
+        assertEquals(-2, actual);
+    }
 }
 
 

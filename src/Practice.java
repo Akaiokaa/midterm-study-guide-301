@@ -129,7 +129,7 @@ public class Practice {
 
         return oddCount - evenCount;
     }
-    public static int secondLargestNumber(){
+    public static int secondLargestNumber(Map<Integer, Integer> map){
         return 0;
     }
 
