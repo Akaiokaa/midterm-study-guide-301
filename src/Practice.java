@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Set;
@@ -131,7 +132,15 @@ public class Practice {
     }
     //keys
     public static int secondLargestNumber(Map<Integer, Integer> map){
-        return 0;
+        /*
+         * pseudocode
+         * create a new arrayList<Itegers> then keySet() all the keys into it
+         * collections.sort( arraylist, Collectiosn.reversorder)
+         * return array.get(1)
+         */
+        List<Integer> numbersSorted = new ArrayList<>(map.keySet());
+        Collections.sort(numbersSorted, Collections.reverseOrder());
+        return numbersSorted.get(1);
     }
 
 
