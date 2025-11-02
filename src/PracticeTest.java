@@ -189,7 +189,7 @@ public class PracticeTest {
     }
     //Test cases for secondLargestNumber
     @Test
-    void testSecondLargestNumbers_SearchForSecondKeyEqualsSix() {
+    void testSecondLargestNumber_SearchForSecondKeyEqualsSix() {
         // Arrange
         Map<Integer,Integer> input = new HashMap<>();
         input.put( 2,1);
@@ -202,7 +202,7 @@ public class PracticeTest {
         assertEquals(6, actual);
     }
     @Test
-    void testSecondLargestNumbers_AllPositiveKeys() {
+    void testSecondLargestNumber_AllPositiveKeys() {
         // Arrange
         Map<Integer,Integer> input = new HashMap<>();
         input.put(2, 1);
@@ -216,7 +216,7 @@ public class PracticeTest {
     }
 
     @Test
-    void testSecondLargestNumbers_TwoKeysOnly() {
+    void testSecondLargestNumber_TwoKeysOnly() {
         // Arrange
         Map<Integer,Integer> input = new HashMap<>();
         input.put(100, 1);
@@ -228,7 +228,7 @@ public class PracticeTest {
     }
 
     @Test
-    void testSecondLargestNumbers_KeysWithNegatives() {
+    void testSecondLargestNumber_KeysWithNegatives() {
         // Arrange
         Map<Integer,Integer> input = new HashMap<>();
         input.put(-5, 1);
